@@ -152,6 +152,149 @@
     
     
     <article
+  id="post-使用git进行代码管理"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/03/01/%E4%BD%BF%E7%94%A8git%E8%BF%9B%E8%A1%8C%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/"
+    >使用git进行代码管理</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/03/01/%E4%BD%BF%E7%94%A8git%E8%BF%9B%E8%A1%8C%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/" class="article-date">
+  <time datetime="2024-03-01T07:32:02.000Z" itemprop="datePublished">2024-03-01</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="使用git进行代码管理"><a href="#使用git进行代码管理" class="headerlink" title="使用git进行代码管理"></a>使用git进行代码管理</h1><h2 id="【0】装clash-verge1-0-3"><a href="#【0】装clash-verge1-0-3" class="headerlink" title="【0】装clash-verge1.0.3"></a>【0】装clash-verge1.0.3</h2><p>Ubuntu 20.04.6 LTS 版本不支持最新版本的clash，导致正常安装clash会运行不了，经试验1.0.3版本的clash-verge可以正常运行</p>
+<p>用<code>lsb_release -a</code>查看ubuntu版本号</p>
+<h2 id="【1】在GitHub上创建账户"><a href="#【1】在GitHub上创建账户" class="headerlink" title="【1】在GitHub上创建账户"></a>【1】在GitHub上创建账户</h2><h3 id="1-新建仓库"><a href="#1-新建仓库" class="headerlink" title="1.新建仓库"></a>1.新建仓库</h3><p>登陆GitHub，然后找到“New”按钮，创建一个新的仓库</p>
+<p><img src="/2024/03/01/%E4%BD%BF%E7%94%A8git%E8%BF%9B%E8%A1%8C%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/image-20240301151444143-1709278398894-1.png" alt="image-20240301151444143"></p>
+<h3 id="2-设置仓库名和权限"><a href="#2-设置仓库名和权限" class="headerlink" title="2. 设置仓库名和权限"></a>2. 设置仓库名和权限</h3><p><img src="/2024/03/01/%E4%BD%BF%E7%94%A8git%E8%BF%9B%E8%A1%8C%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/image-20240301151533062-1709278409146-3.png" alt="image-20240301151533062"></p>
+<h3 id="3-得到仓库SSH地址和Quick-setup教程"><a href="#3-得到仓库SSH地址和Quick-setup教程" class="headerlink" title="3.得到仓库SSH地址和Quick setup教程"></a>3.得到仓库SSH地址和Quick setup教程</h3><p><img src="/2024/03/01/%E4%BD%BF%E7%94%A8git%E8%BF%9B%E8%A1%8C%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/image-20240301151622405-1709278418568-5.png" alt="image-20240301151622405"></p>
+<h2 id="【2】配置git"><a href="#【2】配置git" class="headerlink" title="【2】配置git"></a>【2】配置git</h2><h3 id="1-安装git"><a href="#1-安装git" class="headerlink" title="1.安装git"></a>1.安装git</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install git</span><br></pre></td></tr></table></figure>
+<p>用<code>git --version</code>查看git版本号</p>
+<h3 id="2-配置git用户和邮箱"><a href="#2-配置git用户和邮箱" class="headerlink" title="2. 配置git用户和邮箱"></a>2. 配置git用户和邮箱</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name “用户名”</span><br><span class="line">git config --global user.email “邮箱地址”</span><br></pre></td></tr></table></figure>
+<p>用<code>git config --list</code>查看git的配置列表</p>
+<h3 id="3-创建本地仓库"><a href="#3-创建本地仓库" class="headerlink" title="3.创建本地仓库"></a>3.创建本地仓库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> 项目名称</span><br><span class="line"><span class="built_in">cd</span> 项目名称</span><br><span class="line">git init <span class="comment">#git初始化</span></span><br><span class="line">git add . <span class="comment">#添加所有文件到暂存区</span></span><br><span class="line">git commit -m <span class="string">&quot;first commit&quot;</span> <span class="comment">#提交更改（&quot;first commit&quot;为提交信息）</span></span><br><span class="line">git branch -M main <span class="comment">#将默认的master分支重命名为main</span></span><br><span class="line">git remote add origin git@github.com:jellyboxs/233.git <span class="comment">#关联远程仓库（origin后可以填你的SSH地址）</span></span><br><span class="line">git push -u origin main <span class="comment">#推送更改到远程仓库（配置好ssh后）</span></span><br></pre></td></tr></table></figure>
+<h3 id="4-克隆代码仓库"><a href="#4-克隆代码仓库" class="headerlink" title="4. 克隆代码仓库"></a>4. 克隆代码仓库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://&lt;tokens&gt;@github.com/&lt;yourName&gt;/&lt;repositoriesName&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="5-推送同步代码"><a href="#5-推送同步代码" class="headerlink" title="5. 推送同步代码"></a>5. 推送同步代码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull origin master</span><br></pre></td></tr></table></figure>
+<h3 id="6-拉取最新版本的代码"><a href="#6-拉取最新版本的代码" class="headerlink" title="6.拉取最新版本的代码"></a>6.拉取最新版本的代码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure>
+<h2 id="【3】配置SSH"><a href="#【3】配置SSH" class="headerlink" title="【3】配置SSH"></a>【3】配置SSH</h2><h3 id="1-安装SSH"><a href="#1-安装SSH" class="headerlink" title="1.安装SSH"></a>1.安装SSH</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install ssh</span><br></pre></td></tr></table></figure>
+<p>用<code>ps -e | grep sshd</code>查看SSH版本信息</p>
+<h3 id="2-生成-SSH-密钥对"><a href="#2-生成-SSH-密钥对" class="headerlink" title="2. 生成 SSH 密钥对"></a>2. 生成 SSH 密钥对</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C “用户邮箱地址”</span><br></pre></td></tr></table></figure>
+<p>用<code>ls -al ~/.ssh</code>查看有无SSH key（第一次应该是没有的）</p>
+<p>回车后会让你设置密码（每次推送就会都输密码），可以不设置一直按回车</p>
+<h3 id="3-复制-SSH-key"><a href="#3-复制-SSH-key" class="headerlink" title="3.复制 SSH key"></a>3.复制 SSH key</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
+<h3 id="4-将-SSH-添加到-GitHub"><a href="#4-将-SSH-添加到-GitHub" class="headerlink" title="4.将 SSH 添加到 GitHub"></a>4.将 SSH 添加到 GitHub</h3><p>在 GitHub 上找到 setting</p>
+<p>找到SSH and gps keys</p>
+<p>粘贴复制的ssh key 设置一下title</p>
+<h3 id="5-测试-SSH-连接"><a href="#5-测试-SSH-连接" class="headerlink" title="5.测试 SSH 连接"></a>5.测试 SSH 连接</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<p><img src="/home/tromac/snap/typora/86/.config/Typora/typora-user-images/image-20240301150840630.png" alt="image-20240301150840630"></p>
+<h2 id="【4】补充的话"><a href="#【4】补充的话" class="headerlink" title="【4】补充的话"></a>【4】补充的话</h2><h3 id="1-报错-fatal-远程-origin-已经存在"><a href="#1-报错-fatal-远程-origin-已经存在" class="headerlink" title="1.报错 fatal: 远程 origin 已经存在"></a>1.报错 fatal: 远程 origin 已经存在</h3><ul>
+<li><p>使用 <code>git remote -v</code> 命令查看当前已经配置的所有远程仓库</p>
+</li>
+<li><p>删除现有的 origin 远程仓库重新添加 <code>git remote remove origin</code> <code>git remote add origin &lt;new-repository-url&gt;</code></p>
+</li>
+<li><p>或添加另一个远程仓库，使用别名如 “origin2” <code>git remote add origin2 &lt;new-repository-url&gt;</code></p>
+</li>
+</ul>
+<h2 id="【5】参考链接"><a href="#【5】参考链接" class="headerlink" title="【5】参考链接"></a>【5】参考链接</h2><p>图比较多不确定的操作可以看看</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/subtitle_/article/details/132054266">ubuntu git操作记录设置ssh key</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Sapphire41/article/details/111514465?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-0-111514465-blog-131914120.235^v43^pc_blog_bottom_relevance_base4&amp;spm=1001.2101.3001.4242.1&amp;utm_relevant_index=3">ubuntu连接github（新手教学）</a></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-刷题笔记"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+     
+    <div class="article-meta">
+      <a href="/2024/02/26/%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time datetime="2024-02-26T12:05:44.365Z" itemprop="datePublished">2024-02-26</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="刷题笔记"><a href="#刷题笔记" class="headerlink" title="刷题笔记"></a>刷题笔记</h1><h2 id="【0】链表"><a href="#【0】链表" class="headerlink" title="【0】链表"></a>【0】链表</h2><h3 id="①-反转链表"><a href="#①-反转链表" class="headerlink" title="① 反转链表"></a>① 反转链表</h3><ul>
+<li><p>递归方法（从后向前）</p>
+<p>让当前节点的下一个节点指向自己，然后让当前节点指向空（将箭头反向）</p>
+<ul>
+<li>递归写法（分为四个部分）<ul>
+<li>最前为触底条件，到什么情况停止递归</li>
+<li>后为深入时要完成的操作</li>
+<li>再为调用函数本身</li>
+<li>后为触底反弹后要完成的操作</li>
+</ul>
+</li>
+<li>递归用时间换空间</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">reverseBookList</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; valInt;</span><br><span class="line">        ListNode* tempNode = <span class="built_in">reverseNode</span>(head);</span><br><span class="line">        <span class="keyword">while</span>(tempNode != <span class="literal">nullptr</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            valInt.<span class="built_in">push_back</span>(tempNode-&gt;val);</span><br><span class="line">            tempNode = tempNode-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> valInt;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">reverseNode</span><span class="params">(ListNode* head)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(head == <span class="literal">nullptr</span> || head-&gt;next == <span class="literal">nullptr</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> head;</span><br><span class="line">        &#125;</span><br><span class="line">        ListNode* tempNode = <span class="built_in">reverseNode</span>(head-&gt;next);</span><br><span class="line">        head-&gt;next-&gt;next = head;</span><br><span class="line">        head-&gt;next = <span class="literal">nullptr</span>;</span><br><span class="line">        <span class="keyword">return</span> tempNode;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>非递归方法（从前往后）</li>
+</ul>
+<p>​    让当前节点指向上一个节点</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">reverseBookList</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; valInt;</span><br><span class="line">        ListNode* proNode = <span class="literal">nullptr</span>;</span><br><span class="line">        <span class="keyword">while</span>(head != <span class="literal">nullptr</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            ListNode* next = head-&gt;next;</span><br><span class="line">            head-&gt;next = proNode;</span><br><span class="line">            proNode = head;</span><br><span class="line">            head = next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(proNode != <span class="literal">nullptr</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            valInt.<span class="built_in">push_back</span>(proNode-&gt;val);</span><br><span class="line">            proNode =  proNode-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> valInt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="②-快慢指针"><a href="#②-快慢指针" class="headerlink" title="② 快慢指针"></a>② 快慢指针</h2><ul>
+<li>输出链表倒数第几位的节点，使用两个指针，一个在前面快，一个在后面慢，保持相等的间距，当前面的指针指向空时，后面的指针指向的就是要找的节点</li>
+</ul>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
   id="post-电控和算法的区别"
   class="article article-type-post"
   itemscope
@@ -413,7 +556,7 @@
       
     <div class="article-entry" itemprop="articleBody">
        
-  <img src="/2024/02/12/%E9%93%AD%E7%89%8C%E5%88%B6%E4%BD%9C%E7%BB%8F%E9%AA%8C%E8%B4%B4V1/2-1707778639928-1.jpg" style="zoom:50%"> 
+  <p><img src="/2024/02/12/%E9%93%AD%E7%89%8C%E5%88%B6%E4%BD%9C%E7%BB%8F%E9%AA%8C%E8%B4%B4V1/2-1707778639928-1.jpg" style="zoom:50%"></p> 
       <a class="article-more-link" href="/2024/02/12/%E9%93%AD%E7%89%8C%E5%88%B6%E4%BD%9C%E7%BB%8F%E9%AA%8C%E8%B4%B4V1/"
         >阅读更多...</a
       >

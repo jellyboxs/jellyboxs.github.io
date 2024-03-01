@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>冬训算法指引二 |  jellyboxs</title>
+      <title>使用git进行代码管理 |  jellyboxs</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -56,7 +56,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-冬训算法指引二"
+  id="post-使用git进行代码管理"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -67,7 +67,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  冬训算法指引二
+  使用git进行代码管理
 </h1>
  
 
@@ -75,19 +75,15 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/02/16/%E5%86%AC%E8%AE%AD%E7%AE%97%E6%B3%95%E6%8C%87%E5%BC%95%E4%BA%8C/" class="article-date">
-  <time datetime="2024-02-16T01:16:28.000Z" itemprop="datePublished">2024-02-16</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%86%AC%E8%AE%AD/">冬训</a>
-  </div>
-  
+      <a href="/2024/03/01/%E4%BD%BF%E7%94%A8git%E8%BF%9B%E8%A1%8C%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/" class="article-date">
+  <time datetime="2024-03-01T07:32:02.000Z" itemprop="datePublished">2024-03-01</time>
+</a>   
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">781</span>
+            <span class="post-count">594</span>
         </span>
     </span>
 
@@ -111,60 +107,42 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <center> <img src="/2024/02/16/%E5%86%AC%E8%AE%AD%E7%AE%97%E6%B3%95%E6%8C%87%E5%BC%95%E4%BA%8C/5.png" alt> </center>
-
-<div style="page-break-after: always;"></div>
-
-<span id="more"></span>
-<h2 id="【0】引言"><a href="#【0】引言" class="headerlink" title="【0】引言"></a>【0】引言</h2><blockquote>
-<p>大家好(ノ ^ o^)ノ，我们是算法组的学长和学姐，我们又见面了！<br>这次给大家带来的是进阶部分的知识，不知道前面的内容大家掌握的怎么样呢<br>前情提示：先掌握了入门指南，再进行后续的学习哦<br>装系统过程一定遇到了许多问题吧<br>解决这些问题的你一定是和封面的妹子一样可爱（＞ｙ＜）<br>c语言基础你们有初探编程语言的魅力吗？<br>有感受到ros系统的方便之处吗？有被tf树狠狠折磨吗？<br>如果有，恭喜你和去年的我们一样<br>从明向走到北大街很长<br>但其实，不论多远，都是一步一步走来的<br>好啦，同行者<br>祝你学习顺利！໒( = ᴥ =)ʋ</p>
-</blockquote>
-<p><div style="page-break-after: always;"></div><br><strong>以下为第二部分的学习目标，建议大家<code>语言部分</code>和<code>算法组基础</code>部分并行学习</strong></p>
-<h2 id="【1】C-类和对象"><a href="#【1】C-类和对象" class="headerlink" title="【1】C++类和对象"></a>【1】C++类和对象</h2><blockquote>
-<p>《黑马程序员匠心之作|C++教程从0到1入门编程,学习编程不再难》 BV1et411b73Z </p>
-<p>《菜鸟教程》<a target="_blank" rel="noopener" href="https://www.runoob.com/cplusplus/cpp-tutorial.html">https://www.runoob.com/cplusplus/cpp-tutorial.html</a></p>
-<p><strong>标 “ * ” 为选学内容</strong>，比赛涉及较少，在所有不标*内容学完后再看</p>
-<p><strong>实践</strong>要求是跟着视频课复现样例代码并成功运行</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>p99 - p142 类与对象是C++重点和难点内容，了解类的思想很重要，用分类的眼光看世界，对象是类的实例，这部分内容<strong>掌握到能看懂代码并实践</strong>，知道怎么定义类，构造函数析构函数在什么时候调用，公有保护私有属性的权限等等即可。在比赛实践中，会大量的使用这种思想，鼓励大家在<a target="_blank" rel="noopener" href="https://bbs.robomaster.com/portal.php">rm论坛</a>上下载各种开源来看，就会发现越好的学校开出来的代码对这部分的理解会越好，应用的也越好。</p>
-</blockquote>
-<p>封装                                              p99 - p105</p>
-<p>对象特性                                      p106 - p112</p>
-<pre><code>                                                  p114 - p117
-</code></pre><p><em>*静态成员</em>                                    p113 </p>
-<p><em>*友元函数与友元类</em>                     p118 - p120</p>
-<p>操作符与运算符重载                   p121 - p126</p>
-<p>继承                                              p127 - p134</p>
-<p><em>*虚函数与多态</em>                             p135 - p142</p>
-<p><div style="page-break-after: always;"></div></p>
-<h2 id="【2】算法部分基础"><a href="#【2】算法部分基础" class="headerlink" title="【2】算法部分基础"></a>【2】算法部分基础</h2><h3 id="①-学习部分——RM视觉组培训视频"><a href="#①-学习部分——RM视觉组培训视频" class="headerlink" title="① 学习部分——RM视觉组培训视频"></a>① 学习部分——RM视觉组培训视频</h3><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">教程</th>
-<th style="text-align:left">B站视频号</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">RM视觉组培训视频  p4p5</td>
-<td style="text-align:left">BV1CE411R7n4</td>
-<td>可以做学习语言学累之后的放松，<strong>但是得看</strong></td>
-</tr>
-</tbody>
-</table>
-</div>
-<left> <img src="/2024/02/16/%E5%86%AC%E8%AE%AD%E7%AE%97%E6%B3%95%E6%8C%87%E5%BC%95%E4%BA%8C/4.png" alt align="right"></left>
-
-<h3 id="②-实践部分——用源码编译opencv"><a href="#②-实践部分——用源码编译opencv" class="headerlink" title="② 实践部分——用源码编译opencv"></a>② 实践部分——用源码编译opencv</h3><p><font size="5">注：opencv编译版本均为opencv4，队里常用的版本是4.6.0</font>大家可以选择与队里的保持一致</p>
-<p>实践过程中一定会遇到各种问题，希望大家可以锻炼自主解决问题，查阅资料，找其他学校的同学交流的能力，鼓励大家先<font size="5"> <strong>自行尝试解决</strong></font>。如果你们确实需要帮助，可以向学长学姐请教，但请先自己努力思考，尽量少问一些可以<strong>直接通过查阅资料</strong>或者<strong>简单思考就能得到答案的问题</strong>，记得利用好AI的手段哟~</p>
-<p><div style="page-break-after: always;"></div></p>
-<h1 id="欢迎大家加入算法组"><a href="#欢迎大家加入算法组" class="headerlink" title=" 欢迎大家加入算法组 ! "></a><h1><center> 欢迎大家加入算法组 ! </center></h1></h1><center> <img src="/2024/02/16/%E5%86%AC%E8%AE%AD%E7%AE%97%E6%B3%95%E6%8C%87%E5%BC%95%E4%BA%8C/9.png" alt> </center>
-
-<h4><center> 太原理工大学智能交通基地2024 ©</center></h4>
+  <h1 id="使用git进行代码管理"><a href="#使用git进行代码管理" class="headerlink" title="使用git进行代码管理"></a>使用git进行代码管理</h1><h2 id="【0】装clash-verge1-0-3"><a href="#【0】装clash-verge1-0-3" class="headerlink" title="【0】装clash-verge1.0.3"></a>【0】装clash-verge1.0.3</h2><p>Ubuntu 20.04.6 LTS 版本不支持最新版本的clash，导致正常安装clash会运行不了，经试验1.0.3版本的clash-verge可以正常运行</p>
+<p>用<code>lsb_release -a</code>查看ubuntu版本号</p>
+<h2 id="【1】在GitHub上创建账户"><a href="#【1】在GitHub上创建账户" class="headerlink" title="【1】在GitHub上创建账户"></a>【1】在GitHub上创建账户</h2><h3 id="1-新建仓库"><a href="#1-新建仓库" class="headerlink" title="1.新建仓库"></a>1.新建仓库</h3><p>登陆GitHub，然后找到“New”按钮，创建一个新的仓库</p>
+<p><img src="/2024/03/01/%E4%BD%BF%E7%94%A8git%E8%BF%9B%E8%A1%8C%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/image-20240301151444143-1709278398894-1.png" alt="image-20240301151444143"></p>
+<h3 id="2-设置仓库名和权限"><a href="#2-设置仓库名和权限" class="headerlink" title="2. 设置仓库名和权限"></a>2. 设置仓库名和权限</h3><p><img src="/2024/03/01/%E4%BD%BF%E7%94%A8git%E8%BF%9B%E8%A1%8C%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/image-20240301151533062-1709278409146-3.png" alt="image-20240301151533062"></p>
+<h3 id="3-得到仓库SSH地址和Quick-setup教程"><a href="#3-得到仓库SSH地址和Quick-setup教程" class="headerlink" title="3.得到仓库SSH地址和Quick setup教程"></a>3.得到仓库SSH地址和Quick setup教程</h3><p><img src="/2024/03/01/%E4%BD%BF%E7%94%A8git%E8%BF%9B%E8%A1%8C%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/image-20240301151622405-1709278418568-5.png" alt="image-20240301151622405"></p>
+<h2 id="【2】配置git"><a href="#【2】配置git" class="headerlink" title="【2】配置git"></a>【2】配置git</h2><h3 id="1-安装git"><a href="#1-安装git" class="headerlink" title="1.安装git"></a>1.安装git</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install git</span><br></pre></td></tr></table></figure>
+<p>用<code>git --version</code>查看git版本号</p>
+<h3 id="2-配置git用户和邮箱"><a href="#2-配置git用户和邮箱" class="headerlink" title="2. 配置git用户和邮箱"></a>2. 配置git用户和邮箱</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name “用户名”</span><br><span class="line">git config --global user.email “邮箱地址”</span><br></pre></td></tr></table></figure>
+<p>用<code>git config --list</code>查看git的配置列表</p>
+<h3 id="3-创建本地仓库"><a href="#3-创建本地仓库" class="headerlink" title="3.创建本地仓库"></a>3.创建本地仓库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> 项目名称</span><br><span class="line"><span class="built_in">cd</span> 项目名称</span><br><span class="line">git init <span class="comment">#git初始化</span></span><br><span class="line">git add . <span class="comment">#添加所有文件到暂存区</span></span><br><span class="line">git commit -m <span class="string">&quot;first commit&quot;</span> <span class="comment">#提交更改（&quot;first commit&quot;为提交信息）</span></span><br><span class="line">git branch -M main <span class="comment">#将默认的master分支重命名为main</span></span><br><span class="line">git remote add origin git@github.com:jellyboxs/233.git <span class="comment">#关联远程仓库（origin后可以填你的SSH地址）</span></span><br><span class="line">git push -u origin main <span class="comment">#推送更改到远程仓库（配置好ssh后）</span></span><br></pre></td></tr></table></figure>
+<h3 id="4-克隆代码仓库"><a href="#4-克隆代码仓库" class="headerlink" title="4. 克隆代码仓库"></a>4. 克隆代码仓库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://&lt;tokens&gt;@github.com/&lt;yourName&gt;/&lt;repositoriesName&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="5-推送同步代码"><a href="#5-推送同步代码" class="headerlink" title="5. 推送同步代码"></a>5. 推送同步代码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull origin master</span><br></pre></td></tr></table></figure>
+<h3 id="6-拉取最新版本的代码"><a href="#6-拉取最新版本的代码" class="headerlink" title="6.拉取最新版本的代码"></a>6.拉取最新版本的代码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure>
+<h2 id="【3】配置SSH"><a href="#【3】配置SSH" class="headerlink" title="【3】配置SSH"></a>【3】配置SSH</h2><h3 id="1-安装SSH"><a href="#1-安装SSH" class="headerlink" title="1.安装SSH"></a>1.安装SSH</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install ssh</span><br></pre></td></tr></table></figure>
+<p>用<code>ps -e | grep sshd</code>查看SSH版本信息</p>
+<h3 id="2-生成-SSH-密钥对"><a href="#2-生成-SSH-密钥对" class="headerlink" title="2. 生成 SSH 密钥对"></a>2. 生成 SSH 密钥对</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C “用户邮箱地址”</span><br></pre></td></tr></table></figure>
+<p>用<code>ls -al ~/.ssh</code>查看有无SSH key（第一次应该是没有的）</p>
+<p>回车后会让你设置密码（每次推送就会都输密码），可以不设置一直按回车</p>
+<h3 id="3-复制-SSH-key"><a href="#3-复制-SSH-key" class="headerlink" title="3.复制 SSH key"></a>3.复制 SSH key</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
+<h3 id="4-将-SSH-添加到-GitHub"><a href="#4-将-SSH-添加到-GitHub" class="headerlink" title="4.将 SSH 添加到 GitHub"></a>4.将 SSH 添加到 GitHub</h3><p>在 GitHub 上找到 setting</p>
+<p>找到SSH and gps keys</p>
+<p>粘贴复制的ssh key 设置一下title</p>
+<h3 id="5-测试-SSH-连接"><a href="#5-测试-SSH-连接" class="headerlink" title="5.测试 SSH 连接"></a>5.测试 SSH 连接</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<p><img src="/home/tromac/snap/typora/86/.config/Typora/typora-user-images/image-20240301150840630.png" alt="image-20240301150840630"></p>
+<h2 id="【4】补充的话"><a href="#【4】补充的话" class="headerlink" title="【4】补充的话"></a>【4】补充的话</h2><h3 id="1-报错-fatal-远程-origin-已经存在"><a href="#1-报错-fatal-远程-origin-已经存在" class="headerlink" title="1.报错 fatal: 远程 origin 已经存在"></a>1.报错 fatal: 远程 origin 已经存在</h3><ul>
+<li><p>使用 <code>git remote -v</code> 命令查看当前已经配置的所有远程仓库</p>
+</li>
+<li><p>删除现有的 origin 远程仓库重新添加 <code>git remote remove origin</code> <code>git remote add origin &lt;new-repository-url&gt;</code></p>
+</li>
+<li><p>或添加另一个远程仓库，使用别名如 “origin2” <code>git remote add origin2 &lt;new-repository-url&gt;</code></p>
+</li>
+</ul>
+<h2 id="【5】参考链接"><a href="#【5】参考链接" class="headerlink" title="【5】参考链接"></a>【5】参考链接</h2><p>图比较多不确定的操作可以看看</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/subtitle_/article/details/132054266">ubuntu git操作记录设置ssh key</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Sapphire41/article/details/111514465?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-0-111514465-blog-131914120.235^v43^pc_blog_bottom_relevance_base4&amp;spm=1001.2101.3001.4242.1&amp;utm_relevant_index=3">ubuntu连接github（新手教学）</a></p>
  
       <!-- reward -->
       
@@ -217,32 +195,21 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2024/02/16/%E5%86%AC%E8%AE%AD%E7%AE%97%E6%B3%95%E6%8C%87%E5%BC%95%E4%BA%8C/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2024/03/01/%E4%BD%BF%E7%94%A8git%E8%BF%9B%E8%A1%8C%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A4%A7%E4%B8%80%E5%9F%B9%E8%AE%AD/" rel="tag">大一培训</a></li></ul>
-
     </footer>
   </div>
 
    
   <nav class="article-nav">
     
-      <a href="/2024/02/16/%E5%86%AC%E8%AE%AD%E7%AE%97%E6%B3%95%E6%8C%87%E5%BC%95%E4%B8%89/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            冬训算法指引三
-          
-        </div>
-      </a>
     
-    
-      <a href="/2024/02/16/%E5%86%AC%E8%AE%AD%E7%AE%97%E6%B3%95%E6%8C%87%E5%BC%95%E4%B8%80/" class="article-nav-link">
+      <a href="/2024/02/26/%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">冬训算法指引一</div>
+        <div class="article-nav-title"></div>
       </a>
     
   </nav>
